@@ -1,0 +1,42 @@
+// Ler 8 elementos em uma matriz A tipo vetor. Criar uma matriz B de mesma dimensão com os elementos da matriz multiplicados por 5. 
+// Exibir a matriz B na ordem crescente. 
+// Criar uma rotina para pesquisar os elementos armazenados na matriz B
+#include<stdio.h>
+int main(){
+	int A[8], B[8], i, j, x, z, a, n;
+	for(i=0; i<=7; ++i){
+		printf("Insira um valor: \n");
+		scanf("%d", &A[i]);
+		B[i]=A[i]*5;
+	}
+	
+	for(i=0; i<=7; ++i){
+		for(j=i+1; j<=7; ++j){
+			if(B[i] > B[j]){
+				x=B[i];
+				B[i]=B[j];
+				B[j]=x;
+			}
+		}
+	}
+	
+	for(j=0; j<=7; j++){
+		printf("\n %d", B[j]);}
+		
+	printf("\n Insira um numero a ser pesquisado: ");
+	scanf("%d", &n);
+	j=0;
+	a=0;
+	while (j<=7 && a==0 ){
+		if (B[j]==n){
+			a=1;
+		}
+		else {
+			j = j + 1;
+		}
+		if (a==1)
+			printf("\n Foi localizado em %d", j+1);
+	}
+	
+	return 0;
+}
