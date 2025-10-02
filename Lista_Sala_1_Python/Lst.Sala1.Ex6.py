@@ -1,0 +1,5 @@
+V = int(input("Entre com o valor: "))
+Ta = int(input("Entre com o valor taxa: "))
+Te = int(input("Entre com o valor tempo: "))
+P = V + (V * (Ta / 100) * Te)
+print(P)
