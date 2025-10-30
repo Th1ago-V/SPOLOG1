@@ -1,0 +1,18 @@
+x = []
+print("Entre com seu RA corrompido: ")
+for i in range(1, 10):
+    x.append(int(input("")))
+
+y = []
+
+y.append(x[0])
+y.append(x[1])
+y.append(x[7])
+y.append(x[6])
+y.append(x[4])
+y.append(x[5])
+y.append(x[2])
+y.append(x[3])
+y.append(x[8])
+
+print("Seu RA coretor é: ", y)
